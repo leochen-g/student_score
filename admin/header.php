@@ -9,12 +9,13 @@
 	</div>
 	<div class="menu">
 		<ul>
-			<li><a href="admin_result.php">查询学生的信息</a></li>
-			<li><a href="select_all.php">查看全部学生成绩</a></li>
+			<li><a href="admin_result.php">查询信息</a></li>
+			<li><a href="select_all.php">全部学生成绩</a></li>
 			<li><a href="insert_sinfo1.php">录入新的学生</a></li>
 			<li><a href="insert_grade1.php">录入学生的成绩</a></li>
 			<li><a href="insert_course1.php">科目管理</a></li>
 			<li><a href="insert_certificate1.php">证书状态管理</a></li>
+			<li><a href="upfile.php">信息导入</a></li>
 			<li><a href="changpassword1.php">修改密码</a></li>
 			<li><a href="../index.php">退出</a></li>
 		</ul>
