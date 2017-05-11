@@ -54,7 +54,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 			<div class="content">
 				<table  width="900" height="50px" border="1" cellspacing="5" align="center" style="table-layout: fixed;">
 					<tr>
-						<td  height="28">身份证号</td>
+						<td  height="28" style="width: 200px">身份证号</td>
 						<td >姓名</td>
 						<td >科目编号</td>
 						<td >科目名称</td>
