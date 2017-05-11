@@ -1,0 +1,121 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei", Verdana, Arial, Helvetica, sans-serif;
+}
+ul, li {
+	list-style: none;
+}
+h1, h2, h3, h4 {
+	font-size: 100%;
+}
+.submit input {
+	width: 80px;
+	height: 30px;
+	border: 1px solid #000000;
+	background-color: #9DE8EF;
+	margin-left: 10px;
+}
+.banner{
+	width: 1200px;
+	height: 100px;
+	background-color: #358edd;
+	margin: 0 auto;
+}
+#logo{
+	width: 1000px;
+	margin: 0 auto;
+}
+.header{
+	width: 1200px;
+	margin: 0 auto;
+}
+.title h2{
+	font-size: 23px;
+	text-align: right;
+	margin: 10px 0;
+	color: white;
+}
+.menu{
+	width: 1200px;
+	margin: 0 auto;
+	height: 50px;
+}
+.menu ul{
+	width: 1200px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+.menu ul li{
+	float: left;
+	width: 150px;
+	height: 50px;
+	background-color: grey;
+	text-align: center;
+	line-height: 50px;
+}
+.menu ul li a{
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+.menu ul li:hover{
+	background-color: lightblue;
+}
+.stu-menu{
+	width: 1200px;
+	margin: 0 auto;
+	height: 50px;
+}
+.stu-menu ul{
+	width: 1200px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+.stu-menu ul li{
+	float: left;
+	width: 400px;
+	height: 50px;
+	background-color: grey;
+	text-align: center;
+	line-height: 50px;
+}
+.stu-menu ul li a{
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+.stu-menu ul li:hover{
+	background-color: lightblue;
+}
+.main-content{
+	width: 1200px;
+	margin: 0 auto;
+	background-image: url(../pic/bg.jpg);
+	min-height: 700px;
+}
+.footer{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+.content{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 50px;
+	
+}
+.content-name{
+	width: 1000px;
+	margin: 20px auto;
+	height: 50px;
+	text-align: center;
+}
+.content-name h2{
+	font-size: 20px;
+}
