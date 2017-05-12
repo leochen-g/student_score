@@ -44,8 +44,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 	?>
 					</font>
 					<font color="red">
-						<?
-						PHP
+						<?PHP
 						date_default_timezone_set( "PRC" );
 						echo date( "Y.m.d" );
 						?>
@@ -54,7 +53,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 				</li>
 				<li><a href="changpwd1.php">修改密码</a>
 				</li>
-				<li><a href="index.php">安全退出</a>
+				<li><a href="../index.php">安全退出</a>
 				</li>
 			</ul>
 		</div>
