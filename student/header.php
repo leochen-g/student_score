@@ -33,9 +33,9 @@
 				</li>
 				<li><a href="changpwd1.php">报名查询</a>
 				</li>
-				<li><a href="changpwd1.php">证书查询</a>
+				<li><a href="search_certificate.php">证书查询</a>
 				</li>
-				<li><a href="changpwd1.php">基本信息</a>
+				<li><a href="search_info.php">基本信息</a>
 				</li>
 				<li><a href="changpwd1.php">修改密码</a>
 				</li>

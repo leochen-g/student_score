@@ -3,7 +3,7 @@ session_start();
 include("pagelist.php");
 include("connect.php");
 $rows = mysql_num_rows(mysql_query("select * from grade")); 
-Page($rows,15);
+Page($rows,10);
 $sql = "select * from grade limit $select_from $select_limit";
 $rst = mysql_query($sql); 
 //$result = mysql_query( $sql, $conn )or die( '²é²»µ½' );

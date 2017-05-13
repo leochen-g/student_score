@@ -1,11 +1,9 @@
 <?php
 session_start();
-include("pagelist.php");
 include("connect.php");
-$rows = mysql_num_rows(mysql_query("select * from certificate")); 
-Page($rows,10);
-$sql = "select * from certificate limit $select_from $select_limit";
-$rst = mysql_query($sql); 
+$sid = $_SESSION[ 'customer_user' ];
+$sql = "select * from certificate where sid = '".$sid."'";
+$result = mysql_query( $sql, $conn )or die( '查不到' );
 //$sql = "select * from certificate";
 //$result = mysql_query( $sql, $conn )or die( '查不到' );
 ?>
@@ -23,40 +21,11 @@ $rst = mysql_query($sql);
 	include( "header.php" );
 	?>
 	<div class="main-content">
-		<form action="insert_certificate.php" method="post">
-			<div class="content">
-				<div class="content-name">
-					<h2>证书状态管理</h2>
-				</div>
-				<table width="1000" height="50px" border="0" cellspacing="5" align="center" style="table-layout: fixed;">
-				   <tr>
-				   	<td >身份证号：</td>
-				   	<td >姓名：</td>
-				   	<td >课目编号：</td>
-				   	<td >科目名称：</td>
-				   	<td >状态：</td>
-				   	<td >邮件编号：</td>
-				   	<td >邮件类型：</td>
-				   </tr>
-					<tr>
-						<td ><input style="width: 120px" type="text" name="sid"/></td>
-						<td><input style="width: 120px" type="text" name="sname"/></td>
-						<td><input style="width: 120px" type="text" name="cid"/></td>
-						<td><input style="width: 120px"type="text" name="cname"/></td>
-						<td><input style="width: 120px" type="text" name="estate"/></td>
-						<td><input style="width: 120px" type="text" name="enum"/></td>
-						<td><input style="width: 120px" type="text" name="etype"/></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="添加"/>
-						</td>
-						<td>&nbsp;</td>
-					</tr>
-				</table>
-			</div>
-		</form>
 		<form name="form1" method="post">
 			<div class="content">
+			<div class="content-name">
+					<h2>证书查询</h2>
+				</div>
 				<table  class="table" width="1000" cellspacing="0" cellpadding="0" align="center">
 					<tr>
 						<td  height="28" style="width: 200px">身份证号</td>
@@ -68,7 +37,7 @@ $rst = mysql_query($sql);
 						<td >邮件类型</td>
 					</tr>
 					<?php 
-	    while($row=mysql_fetch_array($rst)){
+	    while($row=mysql_fetch_array($result)){
 	?>
 					<tr>
 						<td>
@@ -101,7 +70,6 @@ $rst = mysql_query($sql);
 				</table>
 			</div>
 		</form>
-		<div class="nav"><?php echo $pagenav; ?></div>
 	</div>
 	<?php
 	include( "footer.php" );

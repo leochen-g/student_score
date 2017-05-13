@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 $sid = $_SESSION[ 'customer_user' ];
 include("connect.php");
