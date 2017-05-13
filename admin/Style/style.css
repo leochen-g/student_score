@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
 	float: left;
 	width: 400px;
 	height: 50px;
-	background-color: grey;
+	background-color: #2c3e50;
 	text-align: center;
 	line-height: 50px;
 }
@@ -118,4 +118,43 @@ h1, h2, h3, h4 {
 }
 .content-name h2{
 	font-size: 20px;
+}
+.table{
+	border: 1px solid black;
+}
+.table td{
+	border: 1px solid black;
+	text-align: center;
+	height: 30px;
+}
+.table tr:first-child{
+	font-size: 16px;
+	font-weight: bold;
+}
+.upfile{
+	height: 300px;
+}
+.upfile input:first-child{
+	border: 1px solid black;
+}
+.upfile input{
+	margin-left: 40px;
+}
+.template{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: left;
+}
+.search_tip{
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 20px 0;
+}
+.nav{
+	width: 1200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 20px;
 }

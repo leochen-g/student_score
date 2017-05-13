@@ -52,9 +52,8 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 	?>
 	<div class="main-content">
 	<form name="form1" method="post">
-		<table width="767" height="324" border="0" align="center">
-			<td colspan="7" >
-				<table width="521" height="109" border="1" align="center">
+	<div class="search_tip">学生信息查询</div>
+	<table class="table search" width="1000" cellspacing="0" cellpadding="0" align="center">
 					<tr>
 						<td width="89">学号：</td>
 						<td width="422">
@@ -71,10 +70,8 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 						</td>
 					</tr>
 				</table>
-			</td>
-			<tr>
-				<td colspan="7" >
-					<table width="645" height="22" border="0">
+				<div class="search_tip"> 基本信息</div>
+				<table class="table" width="1000" cellspacing="0" cellpadding="0" align="center">
 						<tr>
 							<td width="81">学号：
 								<?php echo "$sid"?>
@@ -90,8 +87,9 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 							</td>
 						</tr>
 					</table>
-				</td>
-			</tr>
+	</form>
+	<div class="search_tip">查询结果</div>
+		<table class="table" width="1000" cellspacing="0" cellpadding="0" align="center">
 			<tr>
 				<td width="110" height="28" >学号 </td>
 				<td width="136"   >姓名</td>
@@ -134,7 +132,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 			//$_SESSION['changcid']=$cid;
 			?>
 		</table>
-	</form>
+	
 	</div>
 	<?php
 	include( "footer.php" );

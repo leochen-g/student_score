@@ -49,12 +49,10 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 	?>
 	<div class="main-content">
 	<form name="form1" method="post">
-	<div class="content">
-		<table width="767" height="324" border="0" align="center">
 	
-			<tr>
-				<td colspan="7"  >
-					<table width="521" height="109" border="0" align="center">
+	<div class="content">
+				<div class="search_tip">学生信息查询</div>
+					<table class="table search" width="1000" cellspacing="0" cellpadding="0" align="center">
 						<tr>
 							<td width="89">学号：</td>
 							<td width="422">
@@ -70,8 +68,9 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 							</td>
 						</tr>
 					</table>
-				</td>
-			</tr>
+				</form>
+				<div class="search_tip">查询结果</div>
+			<table class="table" width="1000" cellspacing="0" cellpadding="0" align="center">
 			<tr>
 				<td height="28"   align="center">学号 </td>
 				<td   align="center">姓名</td>
@@ -115,7 +114,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 			?>
 		</table>
 		</div>
-	</form>
+
 	</div>
 	<?php
 	include( "footer.php" );

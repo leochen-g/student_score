@@ -1,8 +1,13 @@
 <?php
 session_start();
+include("pagelist.php");
 include("connect.php");
-$sql = "select * from certificate";
-$result = mysql_query( $sql, $conn )or die( '查不到' );
+$rows = mysql_num_rows(mysql_query("select * from certificate")); 
+Page($rows,15);
+$sql = "select * from certificate limit $select_from $select_limit";
+$rst = mysql_query($sql); 
+//$sql = "select * from certificate";
+//$result = mysql_query( $sql, $conn )or die( '查不到' );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,7 +28,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 				<div class="content-name">
 					<h2>证书状态管理</h2>
 				</div>
-				<table width="900" height="50px" border="0" cellspacing="5" align="center" style="table-layout: fixed;">
+				<table width="1000" height="50px" border="0" cellspacing="5" align="center" style="table-layout: fixed;">
 				   <tr>
 				   	<td >身份证号：</td>
 				   	<td >姓名：</td>
@@ -52,7 +57,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 		</form>
 		<form name="form1" method="post">
 			<div class="content">
-				<table  width="900" height="50px" border="1" cellspacing="5" align="center" style="table-layout: fixed;">
+				<table  class="table" width="1000" cellspacing="0" cellpadding="0" align="center">
 					<tr>
 						<td  height="28" style="width: 200px">身份证号</td>
 						<td >姓名</td>
@@ -63,7 +68,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 						<td >邮件类型</td>
 					</tr>
 					<?php 
-	    while($row=mysql_fetch_array($result)){
+	    while($row=mysql_fetch_array($rst)){
 	?>
 					<tr>
 						<td>
@@ -96,6 +101,7 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 				</table>
 			</div>
 		</form>
+		<div class="nav"><?php echo $pagenav; ?></div>
 	</div>
 	<?php
 	include( "footer.php" );

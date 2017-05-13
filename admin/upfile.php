@@ -18,7 +18,7 @@
 				<div class="content-name">
 					<h2>导入学生信息</h2>
 				</div>
-				<table align="center" width="90%" border="0">
+				<table class="table upfile" width="1000" cellspacing="0" cellpadding="0" align="center">
 					<tr>
 						<td>
 							<input type="file" name="inputExcel">
@@ -26,6 +26,7 @@
 							<input type="submit" name="import" value="导入成绩">
 							<input type="submit" name="import" value="导入证书">
 						</td>
+						<td><a href="../模板.xlsx">下载模板</a></td>
 					</tr>
 				</table>
 			</div>

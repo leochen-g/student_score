@@ -3,7 +3,7 @@
 session_start();
 $sid = $_SESSION[ 'customer_user' ];
 include("connect.php");
-$sql = "select * from grade where sid = '" . $sid . "'";
+$sql = "select * from grade where sid = '".$sid."'";
 $result = mysql_query( $sql, $conn )or die( '查不到' );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -16,47 +16,13 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 </head>
 
 <body>
-	<div class="header">
-		<div class="banner">
-			<div id="logo">
-				<a>
-                    <img src="pic/logo_school.png" alt="" width="210" height="48" />
-            </a>
-				<div class="title">
-					<h2>合肥师范学院计算机等级考试成绩查询系统</h2>
-				</div>
-			</div>
-		</div>
-		<div class="stu-menu">
-			<ul>
-				<li><a href="#"><span class="STYLE4">欢迎您：</span>
-					<font color=red>
-						<?php 
-	$sql1 = "select * from student where sid = '".$sid."'";
-    $result1 = mysql_query($sql1,$conn)or die('查不到');
-	$row = mysql_fetch_array($result1);
-	echo $row[1] ;
+	<?php
+	include("header.php");
 	?>
-					</font>
-					<font color="red">
-						<?PHP
-						date_default_timezone_set( "PRC" );
-						echo date( "Y.m.d" );
-						?>
-					</font>
-					</a>
-				</li>
-				<li><a href="changpwd1.php">修改密码</a>
-				</li>
-				<li><a href="../index.php">安全退出</a>
-				</li>
-			</ul>
-		</div>
-	</div>
 	<div class="main-content">
 	<form name="form1" method="post">
 	<div class="content">
-	<table width="431" height="280" border="0" align="center">
+	<table class="table" width="1000" cellspacing="0" cellpadding="0" align="center">
 		<tr>
 			<td >课程号</td>
 			<td >科目</td>
@@ -82,7 +48,10 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 		</table>
 		</div>
 	</form>
-	<div class="barcode" style="width: 1000px;margin: 0 auto;text-align: center;"><img src="pic/code.jpg" alt="" style="width: 200px;height: 200px;"></div>
+	
+	<div class="barcode">
+	<div class="qrcode_title">二维码成绩查询</div>
+	<img src=http://127.0.0.1/student/qrcode.php?url=http://127.0.0.1/student/qrcode_result.php?sid=<?php echo($_SESSION['customer_user']) ?> ></div>
 	</div>
 	<?php 
 	include("footer.php");
