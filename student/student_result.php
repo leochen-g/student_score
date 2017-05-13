@@ -82,6 +82,7 @@ $result = mysql_query( $sql, $conn )or die( '²é²»µ½' );
 		</table>
 		</div>
 	</form>
+	<div class="barcode" style="width: 1000px;margin: 0 auto;text-align: center;"><img src="pic/code.jpg" alt="" style="width: 200px;height: 200px;"></div>
 	</div>
 	<?php 
 	include("footer.php");

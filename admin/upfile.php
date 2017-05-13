@@ -21,8 +21,10 @@
 				<table align="center" width="90%" border="0">
 					<tr>
 						<td>
-							<input type="file" name="inputExcel"><input type="submit" name="import" value="导入基本信息">
+							<input type="file" name="inputExcel">
+							<input type="submit" name="import" value="导入基本信息">
 							<input type="submit" name="import" value="导入成绩">
+							<input type="submit" name="import" value="导入证书">
 						</td>
 					</tr>
 				</table>
