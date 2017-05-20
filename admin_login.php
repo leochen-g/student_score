@@ -17,7 +17,6 @@ if($count!="")
 {
 $url = "./admin/admin_result.php";
 $_SESSION['admin_user'] = $name;
-echo $_SESSION['admin_user'];
 echo "<script type='text/javascript'>"."location.href='".$url."'"."</script>";
 }
 else 

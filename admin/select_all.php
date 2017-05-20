@@ -2,6 +2,7 @@
 session_start();
 include("pagelist.php");
 include("connect.php");
+
 $rows = mysql_num_rows(mysql_query("select * from grade")); 
 Page($rows,10);
 $sql = "select * from grade limit $select_from $select_limit";
@@ -31,6 +32,7 @@ $rst = mysql_query($sql);
 						<td width="100">姓名</td>
 						<td width="40">科目编号</td>
 						<td width="185">科目</td>
+						<td width="50">等级</td>
 						<td width="50">分数</td>
 						<td width="80">考试日期</td>
 						<td width="67">&nbsp;</td>
@@ -51,6 +53,9 @@ $rst = mysql_query($sql);
 						</td>
 						<td>
 							<?php echo stripslashes($row['cname']);?>
+						</td>
+						<td>
+							<?php echo stripslashes($row['ccredit']);?>
 						</td>
 						<td>
 							<?php echo stripslashes($row['sgrade']); ?>

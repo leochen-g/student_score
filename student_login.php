@@ -12,12 +12,12 @@ $sql = "select * from student where sid = '".$sid."' and spassword = '".$passwor
 $result = mysql_query($sql,$conn)or die('²é²»µ½');
 $row = mysql_fetch_array($result);
 $count = $row[0];
-echo  $row[0];
+//echo  $row[0];
 if($count!="")
 {
 $url = "./student/student_result.php";
 $_SESSION['customer_user'] = $sid;
-echo $_SESSION['customer_user'];
+//echo $_SESSION['customer_user'];
 echo "<script type='text/javascript'>"."location.href='".$url."'"."</script>";
 }
 else 

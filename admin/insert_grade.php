@@ -11,9 +11,10 @@ $sid = $_POST['sid'];
 $sname = $_POST['sname'];
 $cid = $_POST['cid'];
 $cname = $_POST['cname'];
+$ccredit = $_POST['ccredit'];
 $sgrade = $_POST['sgrade'];
 $cdate = $_POST[ 'cdate' ];
-if(!$sid || !$sname ||!$cid ||!$cname || !$sgrade || !$cdate)
+if(!$sid || !$sname ||!$cid ||!$cname || !$sgrade || !$cdate || !$ccredit)
 {
 echo "<script> alert('请输入完整！');</script>";
 	echo "<script> window.location='insert_grade1.php';</script>";
@@ -25,13 +26,14 @@ $sid = addslashes($sid);
 $sname = addslashes($sname);
 $cid = addslashes($cid);
 $cname = addslashes($cname);
+$ccredit = addslashes($ccredit);
 $sgrade = addslashes($sgrade);
 $cdate = addslashes($cdate);	
 include("connect.php");
 	if($sid){
 		$sql = "update  grade set sgrade='".$sgrade."' where sid = '".$sid."' and cid = '".$cid."' ";
 	}else{
-		$sql = "insert into grade values('".$sid."','".$sname."','".$cid."','".$cname."','".$sgrade."','".$cdat."')";
+		$sql = "insert into grade values('".$sid."','".$sname."','".$cid."','".$cname."','".$sgrade."','".$cdat."','".$ccredit."')";
 	}
 
 $result = mysql_query($sql,$conn);
@@ -43,7 +45,7 @@ $result = mysql_query($sql,$conn);
 if($result)
 {
 echo "<script> alert('插入成功！');
-window.location='select_all.php';
+window.location='select_all.php?page=1';
 </script>";
 }
 else

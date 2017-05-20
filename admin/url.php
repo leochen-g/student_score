@@ -1,0 +1,1 @@
+&sid=$_GET[ 'sid' ]&sname=$_GET[ 'sname' ]&school=$_GET[ 'school' ]&sdept=$_GET[ 'sdept' ]&sclass=$_GET[ 'sclass']&cdate=$_GET[ 'cdate' ]&submit1=%B3%C9%BC%A8

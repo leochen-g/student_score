@@ -26,21 +26,6 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 		document.form1.action = "search_student.php";
 		document.form1.submit();
 	}
-
-	function tosubmit3() {
-		document.form1.action = "average_grade.php";
-		document.form1.submit();
-	}
-
-	function tosubmit4() {
-		document.form1.action = "max_min_grade.php";
-		document.form1.submit();
-	}
-
-	function tosubmit5() {
-		document.form1.action = "search_lowgrade.php";
-		document.form1.submit();
-	}
 </script>
 
 <body >
@@ -63,8 +48,6 @@ $result = mysql_query( $sql, $conn )or die( '查不到' );
 							<td>
 								<input name="submit1" type="submit" value="成绩" onclick="tosubmit1()"/>
 								<input name="submit2" type="submit" value="学生信息" onclick="tosubmit2()"/>
-								<input name="submit3" type="submit" value="平均成绩" onclick="tosubmit3()"/>
-								<input name="submit5" type="submit" value="不及格成绩" onclick="tosubmit5()"/>
 							</td>
 						</tr>
 					</table>

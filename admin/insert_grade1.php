@@ -39,6 +39,16 @@
 						</td>
 					</tr>
 					<tr>
+						<td>科目等级：</td>
+						<td><select name="ccredit">
+								<option value="一级">一级</option>
+								<option value="二级">二级</option>
+								<option value="三级">三级</option>
+								<option value="四级">四级</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
 						<td>分数：</td>
 						<td><input type="text" name="sgrade"/>
 						</td>

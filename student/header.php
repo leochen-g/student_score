@@ -31,7 +31,7 @@
 			<ul>
 				<li><a href="student_result.php">成绩查询</a>
 				</li>
-				<li><a href="changpwd1.php">报名查询</a>
+				<li><a href="student_bitems.php?page=1">报名查询</a>
 				</li>
 				<li><a href="search_certificate.php">证书查询</a>
 				</li>

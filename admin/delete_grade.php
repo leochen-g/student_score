@@ -18,7 +18,7 @@ if($result)
 ?>
 <script language="javascript">
   alert("É¾³ý³É¹¦");
-	window.location='select_all.php';
+	window.location='select_all.php?page=1';
 </script>
 <?php
 }

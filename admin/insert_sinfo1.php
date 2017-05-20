@@ -43,7 +43,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>所在的系：</td>
+						<td>所在学院：</td>
 						<td>
 							<select name="school" id="typeId">
 								<?php
