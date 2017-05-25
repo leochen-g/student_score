@@ -42,7 +42,13 @@ function uploadFile($file,$filetempname)
 			} 
 			//explode:函数把字符串分割为数组。
 			$strs = explode("\\",$str);
-			
+//			$sql_select = "select sid from student where sid ='".$strs[0]."'";
+//			$result = mysql_query( $sql_select, $conn )or die( '查不到' );
+//			if ( mysql_num_rows($result) >=1 ) {
+//				echo "<script> alert('编号重复，请重新填写！');</script>";
+//				echo "<script> window.location='insert_bitems1.php?page=1';</script>";
+//				exit;
+//			}
 			//var_dump($strs);
 			//die();
 			$sql = "INSERT  INTO  student(sid,sname,sage,ssex,sdept,sschool,sclass,spassword) VALUES('".$strs[0]."','".$strs[1]."','".$strs[2]."','".$strs[3]."','".$strs[4]."','".$strs[5]."','".$strs[6]."','".$strs[7]."')";
@@ -52,7 +58,8 @@ function uploadFile($file,$filetempname)
 			//echo $sql;
 			mysql_query("set names gb2312");//这就是指定数据库字符集，一般放在连接数据库后面就系了 
 			if(!mysql_query($sql)){
-				return false;
+				echo "<script> alert('数据库中已存在相同数据，请查看修改后重新上传！');</script>";
+				echo "<script> window.location='../upfile.php';</script>";
 			}
 			$str = "";
 	   } 
@@ -60,7 +67,7 @@ function uploadFile($file,$filetempname)
    	   unlink($uploadfile); //删除上传的excel文件
        $msg = "导入成功！";
 		echo "<script> alert('导入成功！');</script>";
-	   echo "<script> window.location='../upfile.php';</script>";
+	    echo "<script> window.location='../upfile.php';</script>";
     }else{
        $msg = "导入失败！";
 		echo "<script> alert('导入失败！');</script>";
@@ -120,7 +127,8 @@ function uploadFile_grade($file,$filetempname)
 			//echo $sql;
 			mysql_query("set names gb2312");//这就是指定数据库字符集，一般放在连接数据库后面就系了 
 			if(!mysql_query($sql)){
-				return false;
+				echo "<script> alert('数据库中已存在相同数据，请查看修改后重新上传！');</script>";
+				echo "<script> window.location='../upfile.php';</script>";
 			}
 			$str = "";
 	   } 
@@ -188,7 +196,8 @@ function uploadFile_ems($file,$filetempname)
 			//echo $sql;
 			mysql_query("set names gb2312");//这就是指定数据库字符集，一般放在连接数据库后面就系了 
 			if(!mysql_query($sql)){
-				return false;
+				echo "<script> alert('数据库中已存在相同数据，请查看修改后重新上传！');</script>";
+				echo "<script> window.location='../upfile.php';</script>";
 			}
 			$str = "";
 	   } 
