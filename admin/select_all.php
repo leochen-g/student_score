@@ -63,7 +63,7 @@ $rst = mysql_query($sql);
 						<td>
 							<?php echo stripslashes($row['cdate']); ?>
 						</td>
-						<td><a href="delete_grade.php">É¾³ý</a>
+						<td><a href="delete_grade.php?sid=<?php echo stripslashes($row['sid']);?>&&cid=<?php echo stripslashes($row['cid']);?>">É¾³ý</a>
 						</td>
 						<?php
 						$_SESSION[ 'deletesid' ] = $row[ 'sid' ];

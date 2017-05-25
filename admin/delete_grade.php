@@ -8,8 +8,8 @@ session_start();
 </head>
 <?php
 
-$sid = $_SESSION['deletesid'];
-$cid = $_SESSION['changecid'];
+$sid = $_GET['sid'];
+$cid = $_GET['cid'];;
 include("connect.php");
 $sql = "delete from grade where sid = '".$sid."' and cid='".$cid."'";
 $result = mysql_query($sql,$conn)or die('²é²»µ½');

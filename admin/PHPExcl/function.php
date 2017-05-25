@@ -182,8 +182,8 @@ function uploadFile_ems($file,$filetempname)
 			//var_dump($strs);
 			//die();
 			//$sql = "INSERT  INTO  student(sid,sname,sage,ssex,sdept,sschool,sclass,spassword) VALUES('".$strs[0]."','".$strs[1]."','".$strs[2]."','".$strs[3]."','".$strs[4]."','".$strs[5]."','".$strs[6]."','".$strs[7]."')";
-			$sql = "INSERT INTO grade(sid,sname,cid,cname,sgrade,cdate,ccredit) VALUES('".$strs[0]."','".$strs[1]."','".$strs[8]."','".$strs[9]."','".$strs[11]."','".$strs[12]."','".$strs[10]."')";
-			//$sql = "INSERT INTO certificate(sid,sname,cid,cname,estate,enum,etype,ccredit) VALUES('".$strs[0]."','".$strs[1]."','".$strs[8]."','".$strs[9]."','".$strs[13]."','".$strs[14]."','".$strs[15]."','".$strs[10]."')";
+			//$sql = "INSERT INTO grade(sid,sname,cid,cname,sgrade,cdate,ccredit) VALUES('".$strs[0]."','".$strs[1]."','".$strs[8]."','".$strs[9]."','".$strs[11]."','".$strs[12]."','".$strs[10]."')";
+			$sql = "INSERT INTO certificate(sid,sname,cid,cname,estate,enum,etype,ccredit) VALUES('".$strs[0]."','".$strs[1]."','".$strs[8]."','".$strs[9]."','".$strs[13]."','".$strs[14]."','".$strs[15]."','".$strs[10]."')";
 			
 			//echo $sql;
 			mysql_query("set names gb2312");//这就是指定数据库字符集，一般放在连接数据库后面就系了 

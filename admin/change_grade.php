@@ -47,6 +47,11 @@ $result = mysql_query($sql,$conn)or die('查不到');
 						</td>
 					</tr>
 					<tr>
+						<td>等级：</td>
+						<td><input type="text" name="ccredit" value="<?php echo stripslashes($row[6]);?>"  />
+						</td>
+					</tr>
+					<tr>
 						<td>分数：</td>
 						<td><input type="text" name="sgrade" value="<?php echo stripslashes($row[4]);?>"  />
 						</td>
@@ -56,6 +61,7 @@ $result = mysql_query($sql,$conn)or die('查不到');
 						<td><input type="text" name="cdate" value="<?php echo stripslashes($row[5]);?>"  />
 						</td>
 					</tr>
+					
 					<tr>
 						<td><input type="submit" value="提交"/>
 						</td>
